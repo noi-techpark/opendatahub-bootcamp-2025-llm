@@ -29,3 +29,16 @@ Since LLMs have limited input length, retrieve only the fields you need using `f
 
 Start easy supporting only English language!
 
+## Quickstarts
+
+Bellow is a cURL example on how to contact the remote LLM. You need to convert the call to whatever Language you are using
+
+```
+curl -X POST "https://api.together.xyz/v1/chat/completions" \
+  -H "Authorization: Bearer $TOGETHER_API_KEY" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "model": "meta-llama/Meta-Llama-3.1-8B-Instruct-Turbo",
+    "messages": [{"role": "user", "content": "Isn't OpenDataHub wonderful?"}]
+  }'
+```
